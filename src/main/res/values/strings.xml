@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">CPH_New</string>
+    <string name="title">Construction Planning Helpler</string>
+    <string name="login">Login</string>
+    <string name="signuplink">Don\'t have an account? Sign up.</string>
+    <string name="loginlink">Already have an account? Login in.</string>
+    <string name="signup">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="email">Email</string>
+    <string name="phonenumber">Phone Number</string>
+    <string name="submit">Sign In</string>
+    <string name="addchild">Add child</string>
+    <string name="addchilddetails">Add your child\'s details.</string>
+    <string name="personalinfo">Personal Information</string>
+    <string name="setting">Settings</string>
+    <string name="changepassword">Change password</string>
+    <string name="savechanges">Save Changes</string>
+    <string name="alerts">Alert sound</string>
+    <string name="notifications">Notification sound</string>
+    <string name="currentpassword">Current password</string>
+    <string name="newpassword">New password</string>
+    <string name="repeatpassword">Confirm password</string>
+    <string name="title_activity_home">Home</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_home">Home</string>
+    <string name="no_text">No text found</string>
+
+    <string name="menu_feedback">App Feedback</string>
+    <string name="menu_uploadAd">Upload Ad</string>
+    <string name="menu_comparison">Visualization Analysis</string>
+    <string name="menu_share">Vendor Knowledge Base</string>
+    <string name="menu_send">Expense Logs</string>
+    <string name="title_home">Home</string>
+
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="spinnertitle">Select Material Type</string>
+    <string name="default_spinner_hint">Material Type</string>
+    <string name="spinnerunittitle">Unit</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="details_heading">Product Description</string>
+    <string name="vendors_profile">Vendor Details</string>
+
+    <string name="Area">Enter the area of Construction per Sqft</string>
+    <string name="Size">Estimated construction rate per square feet</string>
+    <string name="view_charts_graphs_for_your_cost_estimate"><![CDATA[View charts & graphs for your cost estimate.]]></string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string-array name="materialType">
+        <item>Cement</item>
+        <item>Bricks</item>
+        <item>Clay</item>
+        <item>320*620</item>
+        <item>320*620</item>
+    </string-array>
+
+</resources>

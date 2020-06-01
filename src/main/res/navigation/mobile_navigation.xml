@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_home">
+
+    <fragment
+        android:id="@+id/nav_home"
+        android:name="com.example.captureimage.Fragments.FragmentDashboard"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_dashboard" />
+    <fragment
+        android:id="@+id/nav_feed"
+        android:name="com.example.captureimage.Fragments.FeedbackFragment"
+        android:label="@string/menu_feedback"
+        tools:layout="@layout/fragment_feedback" />
+    <fragment
+        android:id="@+id/nav_ad"
+        android:name="com.example.captureimage.Fragments.UploadAdFragment"
+        android:label="@string/menu_uploadAd"
+        tools:layout="@layout/fragment_upload_ad" />
+    <fragment
+        android:id="@+id/nav_comparison"
+        android:name="com.example.captureimage.ui.tools.ToolsFragment"
+        android:label="@string/menu_comparison"
+        tools:layout="@layout/fragment_visualization_analysis" />
+    <fragment
+        android:id="@+id/nav_knowledge"
+        android:name="com.example.captureimage.Fragments.KnowledgeBaseFragment"
+        android:label="@string/menu_share"
+        tools:layout="@layout/fragment_knowledge_base" />
+    <fragment
+        android:id="@+id/nav_expense"
+        android:name="com.example.captureimage.Fragments.ExpenseLogFragment"
+        android:label="@string/menu_send"
+        tools:layout="@layout/fragment_expense_log" />
+</navigation>

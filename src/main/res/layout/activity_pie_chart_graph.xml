@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.PieChartGraph">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_piechart"
+            android:text="Pie Chart"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_labelpiechart"
+            android:text="Construction Cost in rupees"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp" />
+
+
+
+
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/piechartcost"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="20dp">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_Barchart"
+            android:text="Bar Chart"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_labelbarchart"
+            android:text="Construction Cost in rupees"
+            android:layout_marginTop="10dp"
+            android:textSize="12dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/bcgraph"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:layout_marginTop="20dp">
+
+        </com.github.mikephil.charting.charts.BarChart>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_Line"
+            android:text="Line Graph"
+            android:gravity="center"
+            android:textSize="20dp"
+            android:textStyle="bold"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/tv_labellineGraph"
+            android:text="Construction Cost per square feet in rupees and its best fit line "
+            android:textSize="12dp"
+            android:layout_marginTop="10dp"/>
+
+        <com.github.mikephil.charting.charts.LineChart
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:id="@+id/linechartid"
+            android:layout_marginTop="20dp">
+
+        </com.github.mikephil.charting.charts.LineChart>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+
+            >
+
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_estimateline"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Enter the Year to be estimated?" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/et_estimateline"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btn_estimateline"
+                android:text="Enter" />
+            <TextView
+                android:layout_marginTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/tv_resultestimateline"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:text="Enter the Year to be estimated?" />
+
+
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

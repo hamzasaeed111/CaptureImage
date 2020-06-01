@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <!-- This controls the white background-->
+    <item
+        android:width="52dp"
+        android:height="45dp"
+        android:left="0dp"
+        android:bottom="0dp">
+
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="#1FA2D5">
+            </stroke>
+
+            <corners
+                android:topLeftRadius="5dp"
+                android:bottomLeftRadius="5dp"
+                android:topRightRadius="0dp"
+                android:bottomRightRadius="0dp" />
+
+            <solid android:color="#fff" />
+        </shape>
+    </item>
+    <!-- This adds the vector image -->
+
+
+
+    <!-- This draws the border around everything -->
+    <item>
+        <shape android:shape="rectangle">
+            <stroke
+                android:width="2dp"
+                android:color="#1FA2D5"/>
+            <corners
+                android:radius="5dp"
+                />
+        </shape>
+    </item>
+</layer-list>

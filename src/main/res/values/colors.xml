@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#01B7DD</color>
+    <color name="colorPrimaryDark">#000000</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="white">#FFFFFF</color>
+    <color name="submit">#D94555</color>
+    <color name="secondary">#D94555</color>
+    <color name="primary">#b5094b</color>
+    <color name="lightgreywhite">#F3F3F3</color>
+    <color name="gen_app_color">#1FA2D5</color>
+    <color name="my_spinner_text_color">#1FA2D5</color>
+    <color name="textcardColor">#3f3f3f</color>
+    <color name="cardColor">#ffffff</color>
+</resources>

@@ -1,0 +1,758 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".Activities.Estimation">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvRwMaterials"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:height="20dp"
+            android:width="6dp"
+            android:text="Raw Materials"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="0dp"
+        android:background="#696969">
+        <TextView
+            android:id="@+id/tvarea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:text="@string/Area"
+            android:textColor="#FFFAFA"/>
+        <EditText
+            android:id="@+id/etarea"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="#FFFAFA"
+            android:text=""
+            android:textColor="#000000"
+            android:gravity="center"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="0dp"
+        android:background="#696969">
+        <TextView
+            android:id="@+id/tvcostsqft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.75"
+            android:text="@string/Size"
+            android:textColor="#FFFAFA"
+            android:layout_marginLeft="0dp"/>
+        <EditText
+            android:id="@+id/etcostSqft"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.25"
+            android:background="#FFFAFA"
+            android:text=""
+            android:textColor="#000000"
+            android:gravity="center"
+            android:clickable="false"
+            android:cursorVisible="false"
+            android:focusable="false"
+            android:focusableInTouchMode="false"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/switchBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:height="2dp"
+            android:layout_gravity="center"
+            android:onClick="collapseTable"
+            android:text="Show Details"
+            android:textAllCaps="false"
+            android:enabled="true"/>
+        <Button
+            android:id="@+id/enterBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Enter"
+            android:textAllCaps="false"
+            android:layout_marginLeft="190dp"/>
+
+    </LinearLayout>
+
+    <TableLayout
+        android:id="@+id/tableRM"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="0dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginVertical="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#f1f1f1"
+        android:collapseColumns="1,2">
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Material"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Quantity"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Cost"
+                android:textStyle="bold" />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb_tvcementmaterial"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Cement"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvcementquantity"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvcementmanufacturer"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestway"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb_tvsand"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sand"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvsandquantity"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvsandmanufacturer"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestway"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb_tvaggregate"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Aggregate"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvaggregatequantity"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvaggregatemanufacturer"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestway"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb_tvbricks"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bricks"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvbricksquantity"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvbricksmanufacturer"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestway"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb_tvsizestone"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Size Stone"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvsizestonequantity"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvsizestonemanufacturer"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestway"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb_tvsteel"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Steel"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvsteelquantity"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvsteelmanufacturer"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestway"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb_tvwood"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wood"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvwoodquantity"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb_tvwoodmanufacturer"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Bestway"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+        </TableRow>
+
+    </TableLayout>
+    <TableLayout
+        android:id="@+id/tableRM2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_marginVertical="0dp"
+        android:layout_marginHorizontal="10dp"
+        android:background="#f1f1f1"
+        android:collapseColumns="1">
+
+
+        <TableRow>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Miscellaneous Materials"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Cost"
+                android:textStyle="bold"
+                android:layout_weight="1"
+                android:gravity="center"/>
+
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvsoilandconcrete"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Excavation in soil and concrete"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvsoilandconcretecost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvfoundation"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Foundation"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvfoundationcost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvconstructionplinth"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Construction Upto Plinth"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvconstructionplinthcost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvroofingincludingwaterproofing"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Roofing Including Waterproofing"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvroofingincludingwaterproofingcost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvflooring"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Flooring"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvflooringcost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvWoodwork"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Wood Work"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvWoodworkcost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvinternalfinishes"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Internal Finishes"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvinternalfinishescost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvexternalfinishes"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="External Finishes"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvexternalfinishescost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+        </TableRow>
+        <TableRow>
+            <TextView
+                android:id="@+id/tb2_tvwatersupply"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Water Supply"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+            <TextView
+                android:id="@+id/tb2_tvwatersupplycost"
+                android:textColor="@color/colorPrimary"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="-"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:background="#ffffff"
+                android:layout_marginBottom="1dp"
+                android:layout_marginHorizontal="1dp"
+                />
+
+
+
+        </TableRow>
+
+    </TableLayout>
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/switchBtn"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:height="2dp"-->
+    <!--        android:layout_gravity="center"-->
+    <!--        android:onClick="collapseTable"-->
+    <!--        android:text="Show Details"-->
+    <!--        android:textAllCaps="false"-->
+    <!--        android:enabled="true"/>-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tvshow_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=" "
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="#B22222"
+            android:layout_marginBottom="30dp"
+            android:layout_marginVertical="10dp"
+            android:enabled="false" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/pieBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="View Pie Chart"
+            android:textAllCaps="false"
+            android:layout_marginLeft="150dp"
+            android:enabled="false"
+            android:visibility="invisible"/>
+
+    </LinearLayout>
+
+</LinearLayout>

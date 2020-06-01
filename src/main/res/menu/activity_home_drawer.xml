@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/menu_home" />
+        <item
+            android:id="@+id/nav_ad"
+            android:icon="@drawable/ic_file_upload_black_24dp"
+            android:title="@string/menu_uploadAd" />
+        <item
+            android:id="@+id/nav_feed"
+            android:icon="@drawable/ic_feedback_black_24dp"
+            android:title="@string/menu_feedback" />
+        <item
+            android:id="@+id/nav_comparison"
+            android:icon="@drawable/ic_history_black_24dp"
+            android:title="@string/menu_comparison" />
+    </group>
+
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_knowledge"
+                android:icon="@drawable/ic_note_black_24dp"
+                android:title="@string/menu_share" />
+            <item
+                android:id="@+id/nav_expense"
+                android:icon="@drawable/ic_attach_money_black_24dp"
+                android:title="@string/menu_send" />
+        </menu>
+    </item>
+
+</menu>
