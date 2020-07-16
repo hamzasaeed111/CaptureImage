@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import androidx.annotation.NonNull;
@@ -19,6 +20,7 @@ import com.example.captureimage.R;
 
 public class FragmentDashboard extends Fragment implements View.OnClickListener {
     CardView predictPanel,materialAdPanel,visualizationPanel,receiptPanel, uploadAd, feedback;
+    ImageView predictPanelpic,materialAdPanelpic,visualizationPanelpic,receiptPanelpic, uploadAdpic, feedbackpic;
 
     String TAG = "Fragment";
 
@@ -38,6 +40,20 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         uploadAd = view.findViewById(R.id.upload);
         feedback = view.findViewById(R.id.feedback);
 
+        predictPanelpic = view.findViewById(R.id.imgCostPrediction);
+        materialAdPanelpic = view.findViewById(R.id.imgMaterialAds);
+        visualizationPanelpic = view.findViewById(R.id.imgVisualAnalysis);
+        receiptPanelpic = view.findViewById(R.id.imgExpenseLog);
+        uploadAdpic = view.findViewById(R.id.imgUploadAds);
+        feedbackpic = view.findViewById(R.id.imgFeedback);
+
+        predictPanelpic.setOnClickListener(this);
+        materialAdPanelpic.setOnClickListener(this);
+        visualizationPanelpic.setOnClickListener(this);
+        receiptPanelpic.setOnClickListener(this);
+        uploadAdpic.setOnClickListener(this);
+        feedbackpic.setOnClickListener(this);
+
         predictPanel.setOnClickListener(this);
         materialAdPanel.setOnClickListener(this);
         visualizationPanel.setOnClickListener(this);
@@ -50,7 +66,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
     public void onClick(View view)
     {
         //Load CostPredictionFragmanet
-        if(view.getId() == predictPanel.getId())
+        if(view.getId() == predictPanel.getId() ||view.getId() == predictPanelpic.getId())
         {
             Log.d(TAG, "In Fragment"+ Estimation.class.toString().trim());
             try {
@@ -62,7 +78,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
             }
         }
 
-        if(view.getId() == feedback.getId()){
+        if(view.getId() == feedback.getId()||view.getId() == feedbackpic.getId()){
             Fragment ad = new FeedbackFragment();
             FragmentManager fm = getFragmentManager();
             FragmentTransaction fragmentTransaction = fm.beginTransaction();
@@ -70,7 +86,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
             fragmentTransaction.commit();
         }
 
-        if (view.getId() == uploadAd.getId()){
+        if (view.getId() == uploadAd.getId()||view.getId() == uploadAdpic.getId()){
             Fragment ad = new UploadAdFragment();
             FragmentManager fm = getFragmentManager();
             FragmentTransaction fragmentTransaction = fm.beginTransaction();
@@ -79,7 +95,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         }
 
         //Load CostPredictionFragmanet
-        if(view.getId() == materialAdPanel.getId())
+        if(view.getId() == materialAdPanel.getId()||view.getId() == materialAdPanelpic.getId())
         {
             Fragment ad = new KnowledgeBaseFragment();
             FragmentManager fm = getFragmentManager();
@@ -89,7 +105,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         }
 
         //Load CostPredictionFragmanet
-        if(view.getId() == visualizationPanel.getId())
+        if(view.getId() == visualizationPanel.getId()||view.getId() == visualizationPanelpic.getId())
         {
 //            Fragment charts = new PieChartGraph();
 //            FragmentManager fm = getFragmentManager();
@@ -107,7 +123,7 @@ public class FragmentDashboard extends Fragment implements View.OnClickListener 
         }
 
         //Load CostPredictionFragmanet
-        if(view.getId() == receiptPanel.getId())
+        if(view.getId() == receiptPanel.getId()||view.getId() == receiptPanelpic.getId())
         {
             Fragment expense_logs = new ExpenseLogFragment();
             FragmentManager fm = getFragmentManager();
